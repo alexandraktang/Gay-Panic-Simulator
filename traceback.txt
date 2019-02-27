@@ -1,0 +1,31 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 875, in script
+    "[END.]"
+KeyError: u'END'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 875, in script
+    "[END.]"
+  File "/Applications/Renpy/renpy/ast.py", line 613, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "/Applications/Renpy/renpy/exports.py", line 1147, in say
+    who(what, interact=interact)
+  File "/Applications/Renpy/renpy/character.py", line 868, in __call__
+    what = what_pattern.replace("[what]", sub(what, translate=translate))
+  File "/Applications/Renpy/renpy/character.py", line 850, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "/Applications/Renpy/renpy/substitutions.py", line 232, in substitute
+    s = formatter.vformat(s, (), kwargs)
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 585, in _vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 646, in get_field
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 605, in get_value
+KeyError: u'END'
+
+Darwin-17.5.0-x86_64-i386-64bit
+Ren'Py 6.99.12.4.2187
+gay panic simulator 1.0
